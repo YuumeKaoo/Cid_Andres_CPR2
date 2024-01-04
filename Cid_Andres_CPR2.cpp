@@ -7,12 +7,19 @@
 
 using namespace std;
 
+int passed = 0;
+int failed = 0;
 string fname;
 string program;
 string course1;
 string course2;
 string course3;
 string course4;
+string remark1;
+string remark2;
+string remark3;
+string remark4;
+float gwa;
 float avg1;
 float avg2;
 float avg3;
@@ -125,19 +132,31 @@ int main(){
 }
 	system("cls");
 	
-	avg1 = subjA1 + subjA2 + subjA3 + subjA4 / 4;
-	avg2 = subjB1 + subjB2 + subjB3 + subjB4 / 4;
-	avg3 = subjC1 + subjC2 + subjC3 + subjC4 / 4;
-	avg4 = subjD1 + subjD2 + subjD3 + subjD4 / 4;
+	avg1 = (subjA1 + subjA2 + subjA3 + subjA4) / 4;
+	remark1 = avg1 >= 70 ? "Passed" : "Failed";
+	avg2 = (subjB1 + subjB2 + subjB3 + subjB4)/ 4;
+	remark2 = avg2 >= 70 ? "Passed" : "Failed";
+	avg3 = (subjC1 + subjC2 + subjC3 + subjC4) / 4;
+	remark3 = avg3 >= 70 ? "Passed" : "Failed";
+	avg4 = (subjD1 + subjD2 + subjD3 + subjD4) / 4;
+	remark4 = avg4 >= 70 ? "Passed" : "Failed";
+	
+	gwa = avg1 + avg2 + avg3 + avg4 / 4;
 
 	cout << "*********************************************************************" << endl;
 	cout << "Student Name: \t" << fname << endl; 
 	cout << "Program: \t" << program << endl;
 	cout << "*********************************************************************" << endl;
-	cout << "Course Name \t\t\t\t" << "Term 1 \t\t" << "Term 2 \t\t" << "Term 3 \t\t" << "Term 4 \t\t" << "Average \t" << "Remarks \t" << endl;
-	cout << course1;
-	cout << right << setw(25) << "\t  " << subjA1 << "\t\t  " << subjA2 << "\t\t   " << subjA3 << "\t\t    " << subjA4 << "\t   " << avg1;
+	cout << "Course Name\t\t\t" << "Term 1\t\t" << "Term 2\t\t" << "Term 3\t\t" << "Term 4\t\t" << "Average\t\t" << "Remarks\t\t" << endl;
+	cout << course1 << setw(12) << setprecision(2) << fixed << subjA1 << "\t\t" << subjA2 << "\t\t" << subjA3 << "\t\t" << subjA4 << "\t\t" << avg1 << "\t\t" << remark1 << endl;
+	cout << course2 << setw(15) << setprecision(2) << fixed << subjB1 << "\t\t" << subjB2 << "\t\t" << subjB3 << "\t\t" << subjB4 << "\t\t" << avg2 << "\t\t" << remark2 << endl;
+	cout << course3 << setw(20) << setprecision(2) << fixed << subjC1 << "\t\t" << subjC2 << "\t\t" << subjC3 << "\t\t" << subjC4 << "\t\t" << avg3 << "\t\t" << remark3 << endl;
+	cout << course4 << setw(22) << setprecision(2) << fixed << subjD1 << "\t\t" << subjD2 << "\t\t" << subjD3 << "\t\t" << subjD4 << "\t\t" << avg4 << "\t\t" << remark4 << endl;
+	cout << "*********************************************************************" << endl;
+	cout << "General Weighted Average: " << setw(12) << setprecision(2) << fixed << gwa << endl;
+	cout << "Courses Passed: " << setw(12) << fixed << passed << endl;
+	cout << "Courses Failed: " << setw(12) << fixed << failed << endl;
 	cin.ignore();
-	getline(cin, course1);
+	getline(cin, course1);	
 	return 0;
 }
