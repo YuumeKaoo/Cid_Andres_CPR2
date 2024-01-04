@@ -38,7 +38,7 @@ int main(){
 	cout << "Student Name: \t";
 	cin.ignore();
     getline(cin, fname);
-	
+	//bobo
 	cout << "Program Name: \t";
 	cin.ignore();
     getline(cin, program);
