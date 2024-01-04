@@ -135,7 +135,8 @@ int main(){
 	cout << "Program: \t" << program << endl;
 	cout << "*********************************************************************" << endl;
 	cout << "Course Name \t\t\t\t" << "Term 1 \t\t" << "Term 2 \t\t" << "Term 3 \t\t" << "Term 4 \t\t" << "Average \t" << "Remarks \t" << endl;
-	cout << course1 << setw(25) << "\t" << subjA1 << "\t" << subjA2 << "\t" << subjA3 << "\t" << subjA4 << "\t" << avg1;
+	cout << course1;
+	cout << right << setw(25) << "\t  " << subjA1 << "\t\t  " << subjA2 << "\t\t   " << subjA3 << "\t\t    " << subjA4 << "\t   " << avg1;
 	cin.ignore();
 	getline(cin, course1);
 	return 0;
