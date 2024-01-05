@@ -66,15 +66,34 @@ int main(){
 	cout << "Enter Course Name 1: \t";
     getline(cin, course1);
     
-    Course1Grades:
+    SubjA1:
     cout << "Term 1: ";
     cin >> subjA1;
+    if (subjA1 >= 100 || subjA1 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjA1;
+	}
+	SubjA2:
     cout << "Term 2: ";
     cin >> subjA2;
+    if (subjA2 >= 100 || subjA2 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjA2;
+	}
+	SubjA3:
     cout << "Term 3: ";
     cin >> subjA3;
+    if (subjA3 >= 100 || subjA3 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjA3;
+	}
+	SubjA4:
     cout << "Term 4: ";
     cin >> subjA4;
+    if (subjA4 >= 100 || subjA4 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjA4;
+	}
     cout << "*********************************************************************" << endl;
     
     Course2Name:
@@ -82,15 +101,34 @@ int main(){
     cin.ignore();
     getline(cin, course2);
     
-    Course2Grades:
+    SubjB1:
     cout << "Term 1: ";
     cin >> subjB1;
+    if (subjB1 >= 100 || subjB1 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjB1;
+	}
+	SubjB2:
     cout << "Term 2: ";
     cin >> subjB2;
+    if (subjB2 >= 100 || subjB2 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjB2;
+	}
+	SubjB3:
     cout << "Term 3: ";
     cin >> subjB3;
+    if (subjB3 >= 100 || subjB3 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjB3;
+	}
+	SubjB4:
     cout << "Term 4: ";
     cin >> subjB4;
+    if (subjB4 >= 100 || subjB4 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjB4;
+	}
     cout << "*********************************************************************" << endl;
     
     Course3Name:
@@ -98,15 +136,34 @@ int main(){
     cin.ignore();
     getline(cin, course3);
     
-    Course3Grades:
+    SubjC1:
     cout << "Term 1: ";
     cin >> subjC1;
+    if (subjC1 >= 100 || subjC1 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjC1;
+	}
+	SubjC2:
     cout << "Term 2: ";
     cin >> subjC2;
+    if (subjC2 >= 100 || subjC2 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjC2;
+	}
+	SubjC3:
     cout << "Term 3: ";
     cin >> subjC3;
+    if (subjC3 >= 100 || subjC3 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjC3;
+	}
+	SubjC4:
     cout << "Term 4: ";
     cin >> subjC4;
+    if (subjC4 >= 100 || subjC4 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjC4;
+	}
     cout << "*********************************************************************" << endl;
     
     Course4Name:
@@ -114,15 +171,34 @@ int main(){
     cin.ignore();
     getline(cin, course4);
     
-    Course4Grades:
+    SubjD1:
     cout << "Term 1: ";
     cin >> subjD1;
+    if (subjD1 >= 100 || subjD1 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjD1;
+	}
+	SubjD2:
     cout << "Term 2: ";
     cin >> subjD2;
+    if (subjD2 >= 100 || subjD2 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjD2;
+	}
+	SubjD3:
     cout << "Term 3: ";
     cin >> subjD3;
+    if (subjD3 >= 100 || subjD3 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjD3;
+	}
+	SubjD4:
     cout << "Term 4: ";
     cin >> subjD4;
+    if (subjD4 >= 100 || subjD4 <= 0){
+    	cout << "Invalid number! Please enter a valid number." << endl;
+    	goto SubjD4;
+	}
     cout << "*********************************************************************" << endl;
     
     cout << "Generating Report Card";
@@ -153,9 +229,9 @@ int main(){
 	cout << course3 << setw(20) << setprecision(2) << fixed << subjC1 << "\t\t" << subjC2 << "\t\t" << subjC3 << "\t\t" << subjC4 << "\t\t" << avg3 << "\t\t" << remark3 << endl;
 	cout << course4 << setw(22) << setprecision(2) << fixed << subjD1 << "\t\t" << subjD2 << "\t\t" << subjD3 << "\t\t" << subjD4 << "\t\t" << avg4 << "\t\t" << remark4 << endl;
 	cout << "*********************************************************************" << endl;
-	cout << "General Weighted Average: " << setw(12) << setprecision(2) << fixed << gwa << endl;
-	cout << "Courses Passed: " << setw(12) << fixed << passed << endl;
-	cout << "Courses Failed: " << setw(12) << fixed << failed << endl;
+	cout << "General Weighted Average: " << setw(11) << setprecision(2) << fixed << gwa << endl;
+	cout << "Courses Passed: " << setw(21) << fixed << passed << endl;
+	cout << "Courses Failed: " << setw(21) << fixed << failed << endl;
 	cin.ignore();
 	getline(cin, course1);	
 	return 0;
