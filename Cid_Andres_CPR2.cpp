@@ -15,6 +15,7 @@ string course1;
 string course2;
 string course3;
 string course4;
+string remarks[] = {"Passed", "Failed", "Passed", "Failed"};
 string remark1;
 string remark2;
 string remark3;
@@ -217,7 +218,28 @@ int main(){
 	avg4 = (subjD1 + subjD2 + subjD3 + subjD4) / 4;
 	remark4 = avg4 >= 70 ? "Passed" : "Failed";
 	
-	gwa = avg1 + avg2 + avg3 + avg4 / 4;
+    if (remark1 == "Passed") {
+      passed++;
+    } else if (remark1 == "Failed") {
+      failed++;
+    }
+    if (remark2 == "Passed") {
+      passed++;
+    } else if (remark2 == "Failed") {
+      failed++;
+    }
+    if (remark3 == "Passed") {
+      passed++;
+    } else if (remark3 == "Failed") {
+      failed++;
+    }
+    if (remark4 == "Passed") {
+      passed++;
+    } else if (remark4 == "Failed") {
+      failed++;
+    }
+  
+	gwa = (avg1 + avg2 + avg3 + avg4) / 4;
 
 	cout << "*********************************************************************" << endl;
 	cout << "Student Name: \t" << fname << endl; 
@@ -232,7 +254,6 @@ int main(){
 	cout << "General Weighted Average: " << setw(11) << setprecision(2) << fixed << gwa << endl;
 	cout << "Courses Passed: " << setw(21) << fixed << passed << endl;
 	cout << "Courses Failed: " << setw(21) << fixed << failed << endl;
-	cin.ignore();
-	getline(cin, course1);	
+	cout << "*********************************************************************" << endl;
 	return 0;
 }
